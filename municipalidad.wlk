@@ -1,0 +1,6 @@
+object dependenciaDeporte {
+  
+}
+object dependenciaCultura {
+  
+}

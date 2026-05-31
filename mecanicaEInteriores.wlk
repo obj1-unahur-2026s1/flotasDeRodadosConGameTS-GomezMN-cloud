@@ -1,46 +1,20 @@
-object interiorComodo {
-    method capacidad() = 5 
-    method peso() = 700
+class Interior {
+    const capacidad = 3
+    const peso = 700
 }
-object interiorPopular {
-    method capacidad() = 12
-    method peso() = 1000 
+class Motor {
+    const property potencia = 60 
+    const property velocidadMax = 80
+    const property peso = 400
+    const property conTurbo = false
+    const property cajaManual = false
 }
-object motorPulenta {
-    method potencia() = 140
-    method velocidadMax() = 130
-    method peso() = 800
-}
-object motorBaraton {
-    method potencia() = 80
-    method velocidadMax() = 80
-    method peso() = 500
-}
-object motorV1Peugeot {
-    method potencia() = 130
-    method velocidadMax() = 140
-    method peso() = 750
-    method conTurbo() = true
-    method cajaManual() = false
-}
-object motorV2Peugeot {
-    method potencia() = 82 
-    method velocidadMax() = 110
-    method peso() = 650
-    method conTurbo() = false
-    method cajaManual() = true
-}
-object motorV3Peugeot {
-    method potencia() = 125 
-    method velocidadMax() = 135
-    method peso() = 700
-    method conTurbo() = false
-    method cajaManual() = false
-}
-object motorGeneric{
-    method potencia() = 60 
-    method velocidadMax() = 100
-    method peso() = 560
-    method conTurbo() = false
-    method cajaManual() = false
-}
+const motorPulenta = new Motor(potencia = 120, velocidadMax = 130, peso = 800)
+const motorBaraton = new Motor(potencia = 80, velocidadMax = 80, peso = 500)
+const motorV1Peugeot = new Motor(potencia = 130, velocidadMax = 140, peso = 750, conTurbo = true, cajaManual = false)
+const motorV2Peugeot = new Motor(potencia = 82, velocidadMax = 110, peso = 650, conTurbo = false, cajaManual = true)
+const motorV3Peugeot = new Motor(potencia = 125, velocidadMax = 135, peso = 700)
+const motorGeneric = new Motor(potencia = 60, velocidadMax = 100, peso = 560)
+
+const interiorPopular = new Interior(capacidad = 12, peso = 1000)
+const interiorComodo = new Interior(capacidad = 5, peso = 700)
