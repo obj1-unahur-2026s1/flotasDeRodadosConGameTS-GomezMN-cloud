@@ -1,0 +1,39 @@
+import rodados.*
+import municipalidad.*
+import colores.*
+import mecanicaEInteriores.*
+
+describe "test con dos dependencias" {
+  const deporte = new Dependencia(empleados = 45)
+  const cultura = new Dependencia(empleados = 31)
+
+  const cachito = new ChevroletCorsa(color = rojo)
+  const corsaAzul = new ChevroletCorsa(color = azul)
+  const corsaVerde = new ChevroletCorsa(color = verde)
+  const kwidConTanque = new RenaultKwid(color = verde, tieneTanque = true)
+  const especial01 = new Especial(color = beige, capacidad = 5, velocidadMax = 160, peso = 1200) 
+  const kiwidRojo = new RenaultKwid(color = rojo)
+  const trafic = new Trafic(color = blanco, motorActual = motorBataton, interiorActual =  interiorPopular)
+
+  method initialize() {
+    deporte.agregarFlota(cachito)
+    deporte.agregarFlota(corsaAzul)
+    deporte.agregarFlota(corsaVerde)
+    deporte.agregarFlota(kwidConTanque)
+    deporte.agregarFlota(especial01)
+
+    cultura.agregarFlota(cachito)
+    cultura.agregarFlota(kwidConTanque)
+    cultura.agregarFlota(kwidConTanque)
+    cultura.agregarFlota(kiwidRojo)
+    cultura.agregarFlota(trafic)
+  }
+  test "peso total de la flota en ambas dependencias" {
+    assert.equals(6450, deporte.pesoTotalFlota())
+    assert.equals(10700, cultura.pesoTotalFlota())
+  }
+  test "esta bien equipada en ambas dependencias" {
+    assert.that(deporte.estaBienEquipada())
+    assert.that(not cultura.estaBienEquipada())
+  }
+}

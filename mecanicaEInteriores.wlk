@@ -1,16 +1,16 @@
 class Interior {
-    const capacidad = 3
-    const peso = 700
+    const property capacidad = 3
+    const property peso = 700
 }
 class Motor {
-    const property potencia = 60 
-    const property velocidadMax = 80
-    const property peso = 400
+    const property potencia   
+    const property velocidadMax  
+    const property peso  
     const property conTurbo = false
     const property cajaManual = false
 }
 const motorPulenta = new Motor(potencia = 120, velocidadMax = 130, peso = 800)
-const motorBaraton = new Motor(potencia = 80, velocidadMax = 80, peso = 500)
+const motorBataton = new Motor(potencia = 80, velocidadMax = 80, peso = 500)
 const motorV1Peugeot = new Motor(potencia = 130, velocidadMax = 140, peso = 750, conTurbo = true, cajaManual = false)
 const motorV2Peugeot = new Motor(potencia = 82, velocidadMax = 110, peso = 650, conTurbo = false, cajaManual = true)
 const motorV3Peugeot = new Motor(potencia = 125, velocidadMax = 135, peso = 700)
