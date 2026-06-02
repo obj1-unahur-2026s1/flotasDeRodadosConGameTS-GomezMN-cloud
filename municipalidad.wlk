@@ -22,6 +22,9 @@ class Pedidos {
 
     method velocidadRequerida() = distanciaKM / tiempoMaxHS
     method puedeSatisfacerUnPedido(auto) {
-        auto.velocidadMax() > self.velocidadRequerida() + 10 && auto.capacidad() >= cantidadDePasajeros && auto.color() !=  coloresIncompatibles
+        return auto.velocidadMax() > self.velocidadRequerida() + 10 && auto.capacidad() >= cantidadDePasajeros and not coloresIncompatibles.any({c => c == auto.color()}) 
     }
+    method acelerar() = tiempoMaxHS - 1
+    method relajar() = tiempoMaxHS + 1
 }
+
