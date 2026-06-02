@@ -36,4 +36,20 @@ describe "test con dos dependencias" {
     assert.that(deporte.estaBienEquipada())
     assert.that(not cultura.estaBienEquipada())
   }
+  test "capacidad total en color azul en ambas dependencias" {
+    assert.equals(4, deporte.capacidadTotalEnColor(azul))
+    assert.equals(0, cultura.capacidadTotalEnColor(azul))
+  }
+  test "color del rodado mas rapido en ambas dependencias" {
+    assert.that(deporte.colorDelRodadoMasRapido() == especial01.color())
+    assert.that(cultura.colorDelRodadoMasRapido() == cachito.color())
+  }
+  test "es grande en ambas dependencias" {
+    assert.that(deporte.esGrande())
+    assert.that(not cultura.esGrande())
+  }
+  test "capacidad faltante en ambas dependencias" {
+    assert.equals(25, deporte.capacidadFaltante())
+    assert.equals(5, cultura.capacidadFaltante())
+  }
 }
